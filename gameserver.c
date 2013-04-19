@@ -113,7 +113,7 @@ void* clithread (void* grej){
     		//}while(!done);
 		//*/	
 			for(;;){
-				char *skicka[]={"",cli->ip,mystruct.test};
+				char *skicka[]={"",cli->ip,mystruct.test[cli->player]};
 				int buf;
     	        printf("%s har anslutit tcp\n",cli->ip);
 
@@ -123,10 +123,11 @@ void* clithread (void* grej){
 
             	prat(skicka);
          		buf=lyssna();
-         		if(mutex_ptherad_trylock(&mtest[cli->player])){
-         			sprintf(mystruct.test, "%d", buf);
-         			mutex_ptherad_unlock(&mtest[cli->player]);
+         		if(pthread_mutex_trylock(&mtest[cli->player])){
+         			sprintf(mystruct.test[cli->player], "%d", buf);
+         			pthread_mutex_unlock(&mtest[cli->player]);
          		}
+         		printf("%s",mystruct.test);
 			}
 
          	//chop up buf
@@ -152,7 +153,6 @@ static void child_handler(int signum)
     }
 }
 
-}
 
 int main(void)
 {   
@@ -175,9 +175,8 @@ int main(void)
   	pthread_t thread_id[NOPLAYERS];
   	pthread_t nyaid;
   	struct cli_param thread_args[NOPLAYERS];
-  	struct serverthread_params posthreadargs;
-	//pthread_create (&thread_id[i], NULL, &clithread, &thread_args[i]);
-	  pthread_create (&nyaid,NULL,&spelsync,&posthreadargs);
+  	//struct serverthread_params posthreadargs;
+	//  pthread_create (&nyaid,NULL,&spelsync,&posthreadargs);
 
   	/*
 	openlog(DAEMON_NAME,LOG_PID,LOG_LOCAL5);	//daemonize
