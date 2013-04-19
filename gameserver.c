@@ -46,7 +46,7 @@ typedef struct
 	int posx[NOPLAYERS];
 	int posy[NOPLAYERS];
 	int action[NOPLAYERS];
-	char test[NOPLAYERS][MAXSIZE];
+	char test[MAXSIZE];
  } TESTSTRUCT;
 
 /* Define globally accessible variables and a mutex */
@@ -113,7 +113,7 @@ void* clithread (void* grej){
     		//}while(!done);
 		//*/	
 			for(;;){
-				char *skicka[]={"",cli->ip,mystruct.test[cli->player]};
+				char *skicka[]={"",cli->ip,mystruct.test};
 				int buf;
     	        printf("%s har anslutit tcp\n",cli->ip);
 
@@ -124,10 +124,10 @@ void* clithread (void* grej){
             	prat(skicka);
          		buf=lyssna();
          		if(pthread_mutex_trylock(&mtest[cli->player])){
-         			sprintf(mystruct.test[cli->player], "%d", buf);
+         			sprintf(mystruct.test, "%d", buf);
          			pthread_mutex_unlock(&mtest[cli->player]);
          		}
-         		printf("%s",mystruct.test);
+         		printf("global struct contains:%s\n",mystruct.test);
 			}
 
          	//chop up buf

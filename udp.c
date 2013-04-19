@@ -97,9 +97,11 @@ int lyssna(void)
 	printf("listener: packet is %d bytes long\n", numbytes);
 	buf[numbytes] = '\0';
 	printf("listener: packet contains \"%s\"\n", buf);
+
 	int bufint=atoi(buf);
 	//info[0]=bufint[0];
-	
+	printf("listener: int contains \"%d\"\n", bufint);
+
 //funnkar intenneee e ee
 /*
 	sprintf(tmp, "%.*s", 3, buf);
