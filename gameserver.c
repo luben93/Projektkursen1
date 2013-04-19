@@ -47,14 +47,13 @@ typedef struct
 	int posy[NOPLAYERS];
 	int action[NOPLAYERS];
 	int test[NOPLAYERS];
- } DOTDATA;
+ } TESTSTRUCT;
 
 /* Define globally accessible variables and a mutex */
 
-#define NUMTHRDS 4
-#define VECLEN 100
-   DOTDATA dotstr; 
-   pthread_t callThd[NUMTHRDS];
+
+   TESTSTRUCT mystruct; 
+   pthread_t callThd[NOPLAYERS];
    pthread_mutex_t mutexsum;
 
 
