@@ -46,14 +46,14 @@ typedef struct
 	int posx[NOPLAYERS];
 	int posy[NOPLAYERS];
 	int action[NOPLAYERS];
-	int test[NOPLAYERS];
+	char test[NOPLAYERS][MAXSIZE];
  } TESTSTRUCT;
 
 /* Define globally accessible variables and a mutex */
 
 
    TESTSTRUCT mystruct; 
-   pthread_t callThd[NOPLAYERS];
+   pthread_t callThd[NOPLAYERS];//behövs denna?
    pthread_mutex_t mutexsum;
 
 
@@ -74,34 +74,6 @@ struct serverthread_params{
 	int action[NOPLAYERS];
 	int test[NOPLAYERS];
 };
-//*/
-
-
-/*/
-int structhandler(int what,int where, int who){
-	struct serverthread_params grej;
-	if(who){
-		switch(where){
-			//if(mutex_ptherad_trylock(playerlock[who])){
-			//if change from prev
-			case 1:grej.active[who]=what;break;
-			case 2:grej.posx[who]=what;break;
-			case 3:grej.posy[who]=what;break;
-			case 4:grej.action[who]=what;break;
-			//mutex_ptherad_unlock(playerlock[who]);}
-
-		}
-	}else{
-		switch(where){
-			//detta funkar inte =( :( :'(
-			case 1:return grej.active;
-			case 2:return grej.posx;
-			case 3:return grej.posy;
-			case 4:return grej.action;
-		}
-	}
-
-}
 //*/
 
 void sigchld_handler(int s)
@@ -141,7 +113,7 @@ void* clithread (void* grej){
     		}while(!done);
 		//*/	
 
-			char *skicka[]={"",cli->ip,"nu slutar jag"};
+			char *skicka[]={"",cli->ip,mystruct.test};
 			int buf;
             printf("%s har anslutit tcp\n",cli->ip);
 
@@ -151,6 +123,9 @@ void* clithread (void* grej){
 
             prat(skicka);
          	buf=lyssna();
+
+
+
          	//chop up buf
          	//mutex_ptherad_trylock(test[cli->player]);
 
@@ -172,125 +147,6 @@ static void child_handler(int signum)
         exit(EXIT_FAILURE);
         break;
     }
-}
-
-static void daemonize( const char *lockfile )
-{
-    pid_t pid, sid, parent;
-    int lfp = -1;
-
-    /* already a daemon */
-    if ( getppid() == 1 ) return;
-
-    /* Create the lock file as the current user */
-    if ( lockfile && lockfile[0] )
-    {
-        lfp = open(lockfile,O_RDWR|O_CREAT,0640);
-        if ( lfp < 0 )
-        {
-            syslog( LOG_ERR, "unable to create lock file %s, code=%d (%s)",
-                    lockfile, errno, strerror(errno) );
-            exit(EXIT_FAILURE);
-        }
-    }
-
-    /* Drop user if there is one, and we were run as root */
-    if ( getuid() == 0 || geteuid() == 0 )
-    {
-        struct passwd *pw = getpwnam(RUN_AS_USER);
-        if ( pw )
-        {
-            syslog( LOG_NOTICE, "setting user to " RUN_AS_USER );
-            setuid( pw->pw_uid );
-        }
-    }
-
-    /* Trap signals that we expect to recieve */
-    signal(SIGCHLD,child_handler);
-    signal(SIGUSR1,child_handler);
-    signal(SIGALRM,child_handler);
-
-    /* Fork off the parent process */
-    pid = fork();
-    if (pid < 0)
-    {
-        syslog( LOG_ERR, "unable to fork daemon, code=%d (%s)",
-                errno, strerror(errno) );
-        exit(EXIT_FAILURE);
-    }
-    /* If we got a good PID, then we can exit the parent process. */
-    if (pid > 0)
-    {
-
-        /* Wait for confirmation from the child via SIGTERM or SIGCHLD, or
-           for two seconds to elapse (SIGALRM).  pause() should not return. */
-        alarm(2);
-        pause();
-
-        exit(EXIT_FAILURE);
-    }
-
-    /* At this point we are executing as the child process */
-    parent = getppid();
-
-    /* Cancel certain signals */
-    signal(SIGCHLD,SIG_DFL); /* A child process dies */
-    signal(SIGTSTP,SIG_IGN); /* Various TTY signals */
-    signal(SIGTTOU,SIG_IGN);
-    signal(SIGTTIN,SIG_IGN);
-    signal(SIGHUP, SIG_IGN); /* Ignore hangup signal */
-    signal(SIGTERM,SIG_DFL); /* Die on SIGTERM */
-
-    /* Change the file mode mask */
-    umask(0);
-
-    /* Create a new SID for the child process */
-    sid = setsid();
-    if (sid < 0)
-    {
-        syslog( LOG_ERR, "unable to create a new session, code %d (%s)",
-                errno, strerror(errno) );
-        exit(EXIT_FAILURE);
-    }
-
-    /* Change the current working directory.  This prevents the current
-       directory from being locked; hence not being able to remove it. */
-    if ((chdir("/")) < 0)
-    {
-        syslog( LOG_ERR, "unable to change directory to %s, code %d (%s)",
-                "/", errno, strerror(errno) );
-        exit(EXIT_FAILURE);
-    }
-
-    /* Redirect standard files to /dev/null */
-    freopen( "/dev/null", "r", stdin);
-    //freopen( "", "w", stdout);
-    freopen( "/dev/null", "w", stderr);
-
-    /* Tell the parent process that we are A-okay */
-    kill( parent, SIGUSR1 );
-}
-
-void* spelsync (void* parm){
-	struct serverthread_params* sync = (struct serverthread_params*) parm;
-	struct serverthread_params syncprev;
-
-	//int prevactive=1;
-	for(;;){
-		if (sync->active==syncprev.active){
-		//Fel
-		//send(internpipe,sync->active);
-		}
-		if (sync->posx==syncprev.posx){
-		
-		}
-		if (sync->posy==syncprev.posy){
-			
-		}
-		if (sync->action==syncprev.action){
-		
-		}
-	usleep(50);
 }
 
 }
