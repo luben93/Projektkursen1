@@ -37,7 +37,7 @@
 #define WRITE 1	
 #define ERROR 2
 
-pthread_mutex_t test[NOPLAYERS] = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mtest[NOPLAYERS] = PTHREAD_MUTEX_INITIALIZER;
 
 
 typedef struct 
@@ -91,7 +91,7 @@ void* clithread (void* grej){
 
 			///här händer de grejer
 			int done = 0;
-			do{   //infinent loop
+			//do{   //infinent loop
                 
       			strcpy(str,"                                             ");
       			str[0]=0;
@@ -110,21 +110,24 @@ void* clithread (void* grej){
       			//strcmp(str,1)
 
                 usleep(500);
-    		}while(!done);
+    		//}while(!done);
 		//*/	
+			for(;;){
+				char *skicka[]={"",cli->ip,mystruct.test};
+				int buf;
+    	        printf("%s har anslutit tcp\n",cli->ip);
 
-			char *skicka[]={"",cli->ip,mystruct.test};
-			int buf;
-            printf("%s har anslutit tcp\n",cli->ip);
+	        	//for(;;){
 
-        	//for(;;){
+        		//}
 
-        	//}
-
-            prat(skicka);
-         	buf=lyssna();
-
-
+            	prat(skicka);
+         		buf=lyssna();
+         		if(mutex_ptherad_trylock(&mtest[cli->player])){
+         			sprintf(mystruct.test, "%d", buf);
+         			mutex_ptherad_unlock(&mtest[cli->player]);
+         		}
+			}
 
          	//chop up buf
          	//mutex_ptherad_trylock(test[cli->player]);
