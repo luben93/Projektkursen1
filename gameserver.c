@@ -128,6 +128,7 @@ void* clithread (void* grej){
          			pthread_mutex_unlock(&mtest[cli->player]);
          		}
          		printf("global struct contains:%s\n",mystruct.test);
+         		usleep(50);
 			}
 
          	//chop up buf
