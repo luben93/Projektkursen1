@@ -74,7 +74,7 @@ int main(void)
 	}
 
 	freeaddrinfo(servinfo);
-
+while(1){
 	printf("listener: waiting to recvfrom...\n");
 
 	addr_len = sizeof their_addr;
@@ -91,7 +91,7 @@ int main(void)
 	printf("listener: packet is %d bytes long\n", numbytes);
 	buf[numbytes] = '\0';
 	printf("listener: packet contains \"%s\"\n", buf);
-
+}
 	close(sockfd);
 
 	return 0;

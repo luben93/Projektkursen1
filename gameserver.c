@@ -46,7 +46,7 @@ typedef struct
 	int posx[NOPLAYERS];
 	int posy[NOPLAYERS];
 	int action[NOPLAYERS];
-	char test[MAXSIZE];
+	char test[NOPLAYERS][MAXSIZE];
  } TESTSTRUCT;
 
 /* Define globally accessible variables and a mutex */
@@ -72,7 +72,7 @@ struct serverthread_params{
 	int posx[NOPLAYERS];
 	int posy[NOPLAYERS];
 	int action[NOPLAYERS];
-	int test[NOPLAYERS];
+	int test[MAXSIZE];
 };
 //*/
 
@@ -109,26 +109,31 @@ void* clithread (void* grej){
       			printf("received:%s!\n",str);
       			//strcmp(str,1)
 
-                usleep(500);
+                //usleep(50);
     		//}while(!done);
 		//*/	
 			for(;;){
-				char *skicka[]={"",cli->ip,mystruct.test};
-				int buf;
+				//char *skicka[]={"",cli->ip,"00000"};
+				int buf,j;
     	        printf("%s har anslutit tcp\n",cli->ip);
 
 	        	//for(;;){
 
         		//}
 
-            	prat(skicka);
+            	
          		buf=lyssna();
-         		if(pthread_mutex_trylock(&mtest[cli->player])){
-         			sprintf(mystruct.test, "%d", buf);
+         		if(pthread_mutex_trylock(&mtest[cli->player])){// to try or to not try that is the question?
+         			sprintf(mystruct.test[cli->player], "%d", buf);
          			pthread_mutex_unlock(&mtest[cli->player]);
          		}
-         		printf("global struct contains:%s\n",mystruct.test);
-         		usleep(50);
+         		printf("global struct contains:%s\n",mystruct.test[cli->player]);
+				for(j=1;j<NOPLAYERS;j++){
+					char *skicka[]={"",cli->ip,mystruct.test[j]};
+         			prat(skicka);
+         			
+         		}
+         		usleep(500);
 			}
 
          	//chop up buf
