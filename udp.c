@@ -81,7 +81,7 @@ int lyssna(void)
 
 	freeaddrinfo(servinfo);
 
-	printf("listener: waiting to recvfrom...\n");
+	//printf("listener: waiting to recvfrom...\n");
 
 	addr_len = sizeof their_addr;
 	if ((numbytes = recvfrom(sockfd, buf, MAXBUFLEN-1 , 0,
@@ -90,27 +90,27 @@ int lyssna(void)
 		exit(1);
 	}
 
-	printf("listener: got packet from %s\n",
+	//printf("listener: got packet from %s\n",
 		inet_ntop(their_addr.ss_family,
 			get_in_addr((struct sockaddr *)&their_addr),
-			s, sizeof s));
-	printf("listener: packet is %d bytes long\n", numbytes);
+			s, sizeof s);
+	//printf("listener: packet is %d bytes long\n", numbytes);
 	buf[numbytes] = '\0';
-	printf("listener: packet contains \"%s\"\n", buf);
+	//printf("listener: packet contains \"%s\"\n", buf);
 
 	int bufint=atoi(buf);
 	//info[0]=bufint[0];
-	printf("listener: int contains \"%d\"\n", bufint);
+	//printf("listener: int contains \"%d\"\n", bufint);
 
 //funnkar intenneee e ee
 /*
-	sprintf(tmp, "%.*s", 3, buf);
+	s//printf(tmp, "%.*s", 3, buf);
 	info[1]=atoi(tmp);
-	sprintf(tmp, "%.*s", 3-6, buf);
+	s//printf(tmp, "%.*s", 3-6, buf);
 	info[2]=atoi(tmp);
-	sprintf(tmp, "%.*s", 6-9, buf);
+	s//printf(tmp, "%.*s", 6-9, buf);
 	info[3]=atoi(tmp);
-	sprintf(tmp, "%.*s", 9-12, buf);
+	s//printf(tmp, "%.*s", 9-12, buf);
 	info[4]=atoi(tmp);
 	*/
 	close(sockfd);
@@ -135,7 +135,7 @@ int prat (char *argv[])
         fprintf(stderr,"usage: talker hostname message\n");
         exit(1);
     }*/
-        //printf("helloworld\nip:%s\nmessage:%s\n",argv[1],argv[2]);
+        ////printf("helloworld\nip:%s\nmessage:%s\n",argv[1],argv[2]);
     memset(&hints, 0, sizeof hints);
     hints.ai_family = AF_UNSPEC;
     hints.ai_socktype = SOCK_DGRAM;
@@ -169,7 +169,7 @@ int prat (char *argv[])
 
     freeaddrinfo(servinfo);
 
-    printf("talker: sent %d bytes to %s\n", numbytes, argv[1]);
+    //printf("talker: sent %d bytes to %s\n", numbytes, argv[1]);
     close(sockfd);
 
     return 0;
@@ -182,7 +182,7 @@ int prat (char *argv[])
 
 
 
-
+/*
 //int main(int argc, char *argv[])
 int clilogon( char *argv[])
 {
@@ -195,22 +195,22 @@ int clilogon( char *argv[])
 	int t, len;
 	char str[MAXSIZE];
 
-	/*/avkommentera för att välja ip
+	//avkommentera för att välja ip
 	if (argc != 2) {
 		//strcpy(address,ADDRESS);
 		//strcpy(port,PORT);
-		//printf("localhost används\n");
+		////printf("localhost används\n");
 	    fprintf(stderr,"usage: client hostname\n");
 	    exit(1);
 	}else{
 		//int i;
 		//for (i=0;i<argc;i++){
-		//	printf("%s",argv[i]);
+		//	//printf("%s",argv[i]);
 		//}
 		//strcpy(address,argv[1]);
 		//strcpy(port,argv[3]);
 	}
-	//*/
+	///
 	
 	
 	memset(&hints, 0, sizeof hints);
@@ -246,12 +246,12 @@ int clilogon( char *argv[])
 
 
 	inet_ntop(p->ai_family, get_in_addr((struct sockaddr *)p->ai_addr),s, sizeof s);
-	printf("client: connecting to %s\n", s);
+	//printf("client: connecting to %s\n", s);
 
 	freeaddrinfo(servinfo); // all done with this structure
 	//char str2[]="hej";
 	//*
-	while(printf("> "), fflush(stdout),fgets(str, 100, stdin), !feof(stdin)) { //skickar
+	while(//printf("> "), fflush(stdout),fgets(str, 100, stdin), !feof(stdin)) { //skickar
 	if (send(sockfd, str, strlen(str), 0) == -0) {
   	    	perror("send");
    	   		exit(1);
@@ -259,26 +259,27 @@ int clilogon( char *argv[])
 
 		//*
 		//do{
-			//printf("#1.\n");
+			////printf("#1.\n");
 			if((numbytes = recv(sockfd, buf, MAXSIZE-1, 0)) == -1) {
 		 	  	perror("recv");
     			exit(1);
 			}
-			//printf("#2.\n");
+			////printf("#2.\n");
 			if(numbytes!=MAXSIZE-1){
 			  buf[numbytes] = '\0';
 			}
 
-			//printf("client: received:\n");
-			printf("%s",buf);
-			//printf("#3.\n");	
+			////printf("client: received:\n");
+			//printf("%s",buf);
+			////printf("#3.\n");	
 		//}while ( strcmp(buf,"server") );
-		//printf("$");
+		////printf("$");
 
-		//printf("slut\n");
-		//*/
+		////printf("slut\n");
+		///
 	}
 	test=close(sockfd);assert(test==0);
-//*/
+///
 	return 0;
 }
+//*/
