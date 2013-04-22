@@ -66,15 +66,7 @@ struct cli_param
   char *ip;
 
 };
-//*/
-struct serverthread_params{
-	int active[NOPLAYERS];
-	int posx[NOPLAYERS];
-	int posy[NOPLAYERS];
-	int action[NOPLAYERS];
-	int test[MAXSIZE];
-};
-//*/
+
 
 void sigchld_handler(int s)
 {
@@ -108,6 +100,7 @@ void* clithread (void* grej){
       			str[n]=0;
       			printf("received:%s!\n",str);
       			//strcmp(str,1)
+				printf("%s har anslutit tcp\n",cli->ip);
 
                 //usleep(50);
     		//}while(!done);
@@ -115,8 +108,7 @@ void* clithread (void* grej){
 			for(;;){
 				//char *skicka[]={"",cli->ip,"00000"};
 				int buf,j;
-    	        printf("%s har anslutit tcp\n",cli->ip);
-
+    	        
 	        	//for(;;){
 
         		//}
@@ -133,7 +125,7 @@ void* clithread (void* grej){
          			prat(skicka);
          			
          		}
-         		usleep(500);
+         		sleep(1);
 			}
 
          	//chop up buf
