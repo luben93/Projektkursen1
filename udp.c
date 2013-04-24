@@ -102,17 +102,6 @@ int lyssna(void)
 	//info[0]=bufint[0];
 	//printf("listener: int contains \"%d\"\n", bufint);
 
-//funnkar intenneee e ee
-/*
-	s//printf(tmp, "%.*s", 3, buf);
-	info[1]=atoi(tmp);
-	s//printf(tmp, "%.*s", 3-6, buf);
-	info[2]=atoi(tmp);
-	s//printf(tmp, "%.*s", 6-9, buf);
-	info[3]=atoi(tmp);
-	s//printf(tmp, "%.*s", 9-12, buf);
-	info[4]=atoi(tmp);
-	*/
 	close(sockfd);
 	return bufint;
 }

@@ -81,16 +81,14 @@ void* clithread (void* grej){
 	//test = close(cli->sockfd); assert(test == 0);// child doesn't need the listener
 			printf("new_fd: %d\n",cli->fd);
 
-			///här händer de grejer
 			int done = 0;
-			//do{   //infinent loop
                 
       			strcpy(str,"                                             ");
       			str[0]=0;
       			//printf("Derp\n");
       			sprintf(str2, "%d", cli->player);
       			send(cli->fd,str2,MAXSIZE,0);
-                printf("sent:%s\n",str2);
+      			printf("sent:%s\n",str2);
                 
                 n = recv(cli->fd, str, MAXSIZE, 0);  //tar imot skit
       			if (n <= 0) {
@@ -102,17 +100,10 @@ void* clithread (void* grej){
       			//strcmp(str,1)
 				printf("%s har anslutit tcp\n",cli->ip);
 
-                //usleep(50);
-    		//}while(!done);
 		//*/	
+			int buf,j;
+			initlyssna();
 			for(;;){
-				//char *skicka[]={"",cli->ip,"00000"};
-				int buf,j;
-    	        
-	        	//for(;;){
-
-        		//}
-
             	
          		buf=lyssna();
          		if(pthread_mutex_trylock(&mtest[cli->player])){// to try or to not try that is the question?
@@ -125,7 +116,7 @@ void* clithread (void* grej){
          			prat(skicka);
          			
          		}
-         		sleep(1);
+         		usleep(40s000);
 			}
 
          	//chop up buf
