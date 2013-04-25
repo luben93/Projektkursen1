@@ -24,8 +24,8 @@
 #define MAXSIZE 100
 #define BACKLOG 10	 // how many pending connections queue will hold
 #define NOPLAYERS 4
-#define SERVERPORT "4950"
-#define MYPORT "4950"	
+//#define SERVERPORT "4950"
+//#define MYPORT "4950"	
 #define MAXBUFLEN 100
 
 
@@ -62,6 +62,7 @@ struct cli_param
   int fd;
   int player;
   int sockfd;
+  int port;
   //char ip[INET6_ADDRSTRLEN];
   char *ip;
 
@@ -75,54 +76,51 @@ void sigchld_handler(int s)
 
 void* clithread (void* grej){
 	int n,test;
-	char str[MAXSIZE],str2[MAXSIZE];
+	char str[MAXSIZE],portstr[MAXSIZE];
 	struct cli_param* cli = (struct cli_param*) grej;
-	fflush(stdout);
-	//test = close(cli->sockfd); assert(test == 0);// child doesn't need the listener
-			printf("new_fd: %d\n",cli->fd);
 
-			int done = 0;
+	printf("new_fd: %d\n",cli->fd);
                 
-      			strcpy(str,"                                             ");
-      			str[0]=0;
+      			//strcpy(str,"                                             ");
+      			//str[0]=0;
       			//printf("Derp\n");
-      			sprintf(str2, "%d", cli->player);
-      			send(cli->fd,str2,MAXSIZE,0);
-      			printf("sent:%s\n",str2);
+      		
+
+	cli->port=cli->player+3800;
+  	sprintf(portstr, "%d", cli->port);
+    send(cli->fd,portstr,MAXSIZE,0);//skickar portnr baserat på spelarid
+    printf("sent:%s\n",portstr);
                 
-                n = recv(cli->fd, str, MAXSIZE, 0);  //tar imot skit
-      			if (n <= 0) {
-          			if (n < 0) perror("recv");
-          		    done = 1;
-      			}
-      			str[n]=0;
-      			printf("received:%s!\n",str);
+    n = recv(cli->fd, str, MAXSIZE, 0);  //tar imot skit
+    if (n <= 0) {
+        if (n < 0) perror("recv");
+          	
+    }
+    		//str[n]=0;
+    printf("received:%s!\n",str);
       			//strcmp(str,1)
-				printf("%s har anslutit tcp\n",cli->ip);
+    printf("%s har anslutit tcp\n",cli->ip);
 
-		//*/	
-			int buf,j;
-			initlyssna();
-			for(;;){
+		
+	int buf,j;
+	for(;;){
             	
-         		buf=lyssna();
-         		if(pthread_mutex_trylock(&mtest[cli->player])){// to try or to not try that is the question?
-         			sprintf(mystruct.test[cli->player], "%d", buf);
-         			pthread_mutex_unlock(&mtest[cli->player]);
-         		}
-         		printf("global struct contains:%s\n",mystruct.test[cli->player]);
-				for(j=1;j<NOPLAYERS;j++){
-					char *skicka[]={"",cli->ip,mystruct.test[j]};
-         			prat(skicka);
+        buf=lyssna(portstr);//!!!!!behöver timeout !!!!!!! kanske även en ticker som dödar efter visst antal sek!!
+
+        if(pthread_mutex_trylock(&mtest[cli->player])){// to try or to not try that is the question?
+   			sprintf(mystruct.test[cli->player], "%d", buf);
+         	pthread_mutex_unlock(&mtest[cli->player]);
+         }
+         printf("global struct contains:%s\n",mystruct.test[cli->player]);
+		for(j=1;j<NOPLAYERS;j++){//sends every players buf
+			char *skicka[]={"",cli->ip,mystruct.test[j], str};
+         	prat(skicka);
          			
-         		}
-         		usleep(40s000);
-			}
+         }
+         		//chop up buf and dist to struct
+   		usleep(500);
+	}
 
-         	//chop up buf
-         	//mutex_ptherad_trylock(test[cli->player]);
-
-			//*/
 }
 
 
@@ -248,26 +246,25 @@ int main(void)
 		//!!!!!!!!!!!
 		int j,ipprev;
 		//funkar typ inte
-		for(j=1;j>=4;j++){
+		for(j=1;j>=4;j++){//kollar om ip addressen redan anslutit
 			if(!strcmp(thread_args[j].ip,s)){
 				ipprev=j;
 				break;
 			}
 		}
 
-		if (!ipprev){
+		//if (!ipprev){
 			thread_args[i].fd=new_fd;
 			thread_args[i].player=i;
 			thread_args[i].ip=s;
 			pthread_create (&thread_id[i], NULL, &clithread, &thread_args[i]);
 			i++;
-		}else{
-			thread_args[j].fd=new_fd;
-			ipprev=0;
+		//}else{//ska återanvanda gammla trådar för gammla ipaddresser
+		//	thread_args[j].fd=new_fd;
+		//	ipprev=0;
+		//}
+		
 		}
-		//test=close(new_fd);assert(test==0);
-        //printf("close returns: %d\n",test);  // parent doesn't need this
-	}
 
 	return 0;
 }

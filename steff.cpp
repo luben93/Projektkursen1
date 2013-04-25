@@ -92,12 +92,6 @@ void renderScene(void) {
                   0.0f, 0.0f,  0.0f,
                   0.0f, 1.0f, 0.0f);
 				  
-	//triangel
-    glBegin(GL_TRIANGLES);
-		glVertex3f(-2.0f,-2.0f, 0.0f);
-		glVertex3f( 2.0f, 0.0f, 0.0);
-		glVertex3f( 0.0f, 2.0f, 0.0);
-	glEnd();
     
         // Uppdaterar spelare
         mainPlayer.update();

@@ -1,0 +1,58 @@
+#include "Player.h"
+#include <GL/gl.h>
+
+float Player::getX(void)
+{
+  return x;
+}
+
+float Player::getY(void)
+{
+  return y;
+}
+
+void Player::moveLeft(void)
+{
+  movingLeft = true;
+}
+
+void Player::moveRight(void)
+{
+  movingRight = true;
+}
+
+void Player::setSpeed(float speed)
+{
+  this->speed = speed;
+}
+
+void Player::jump(void)
+{
+  jumping = true;
+}
+
+void Player::update()
+{
+  if(movingLeft)
+    x -= speed;
+  
+  if(movingRight)
+    x += speed;
+  
+  if(jumping)
+    gravity = 10.0f;
+  
+  if(gravity > -10.0f)
+    gravity -= 0.05f;
+}
+
+void Player::draw()
+{
+  glBegin(GL_QUADS);
+	glVertex3f(0.0f, 0.0f, 0.0f);
+	glVertex3f(1.0f, 0.0f, 0.0f);
+	glVertex3f(1.0f, 1.0f, 0.0f);
+	glVertex3f(0.0f, 1.0f, 0.0f);
+  glEnd();
+}
+
