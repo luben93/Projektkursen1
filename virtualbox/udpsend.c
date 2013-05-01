@@ -69,7 +69,7 @@ int main (void){
 char str[6];
 printf("mata mig portar:");
 fgets(str,5,stdin);
-printf("tack\n");
+printf("tack");
 
 int fd=create(str);
 while(1){

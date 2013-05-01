@@ -231,9 +231,9 @@ return fd;
 }
 
 
-int hear(int fd,char buffer[MAXSIZE]){
+int hear(int fd){
 
-//char buffer[549];
+char buffer[549];
 struct sockaddr_storage src_addr;
 socklen_t src_addr_len=sizeof(src_addr);
 ssize_t count=recvfrom(fd,buffer,sizeof(buffer),0,(struct sockaddr*)&src_addr,&src_addr_len);

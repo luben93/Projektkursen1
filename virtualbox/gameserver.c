@@ -64,7 +64,7 @@ struct cli_param
   int sockfd;
   int port;
   //char ip[INET6_ADDRSTRLEN];
-  char ip[20];
+  char *ip;
 
 };
 
@@ -103,29 +103,39 @@ void* clithread (void* grej){
 
 		
 	int buf,j;
-	char bufstr[MAXSIZE];
+
+	/*///testing
+	while(1){
+	char *skicka[]={"",cli->ip,"3141592635", "4242"};
+    prat(skicka);
+    printf("sent\n");
+	//buf=lyssna("4242");
+	sleep(1);
+	}
+	//*/
+	
+
 	//!!!!!behöver timeout !!!!!! kanske även en ticker som dödar efter visst antal sek
-	//cli->sockfd=beejsconnect(portstr);
-	cli->sockfd=create(portstr);
-	printf("%d\n",cli->sockfd);
+	printf("%d\n",cli->sockfd=beejsconnect(portstr));
 
 	for(;;){
             	
-       	buf=hear(cli->sockfd,bufstr);//!!!!!behöver timeout !!!!!!! kanske även en ticker som dödar efter visst antal sek!!
-        printf("bufstr: %s\n",bufstr);
+        buf=hear(cli->sockfd);//!!!!!behöver timeout !!!!!!! kanske även en ticker som dödar efter visst antal sek!!
+
         if(pthread_mutex_trylock(&mtest[cli->player])){// to try or to not try that is the question?
-   			//sprintf(mystruct.test[cli->player], "%d", buf);
-   			strcpy(mystruct.test[cli->player],bufstr);
+   			sprintf(mystruct.test[cli->player], "%d", buf);//måste tömma strängen oxå
          	pthread_mutex_unlock(&mtest[cli->player]);
         }
         //printf("global struct contains:%s\n",mystruct.test[cli->player]);
-		for(j=1;j<NOPLAYERS+1;j++){//sends every players buf
+		for(j=1;j<NOPLAYERS;j++){//sends every players buf
 			char *skicka[]={"",cli->ip,mystruct.test[j], portstr};
-			printf("sent:%d %s \n",j,mystruct.test[j]);
+			printf("sent: %s \n",mystruct.test[j]);
          	prat(skicka);
          			
         }
-   		sleep(1);//ska vara usleep(500);
+        //sprintf(*strv,"%d1 %d3 %d3 %d2 %d1",intbuf,intbuf,intbuf,intbuf);
+         		//chop up buf and dist to struct
+   		usleep(500);
 	}
 
 }
@@ -161,7 +171,7 @@ int main(void)
 	int t, len,test,accept_server=0,pid,done;
   	struct sockaddr_un local, remote;
   	char str[100];
-  	int i,n=1;
+  	int i=1;
   //noPhils=atoi(argv[1]);
   //lock=atoi(argv[2]);
   	int round = 0;
@@ -235,14 +245,6 @@ int main(void)
 	}
 
 	printf("server: waiting for connections...\n");
-	
-	for (i=1;i<NOPLAYERS;i++){
-		strcpy(thread_args[i].ip,"                  ");
-		thread_args[i].fd=0;
-		thread_args[i].player=0;
-		thread_args[i].port=0;
-		thread_args[i].sockfd=0;
-	}
 
 	while(1) {  // main accept() loop
 		sin_size = sizeof their_addr;
@@ -254,33 +256,30 @@ int main(void)
 
 		inet_ntop(their_addr.ss_family,
 			get_in_addr((struct sockaddr *)&their_addr),s, sizeof s);
-		printf("server: got connection from player %d on %s \n", n,s);
+		printf("server: got connection from player %d on %s \n", i,s);
 
 		//!!!!!!!!!!!
 		//!!!kolla om en ny spelare har samma ip som en gammal och lägg in den nya på den gammla tråden
 		//!!!!!!!!!!!
-		int j,ipprev=0;
+		int j,ipprev;
 		//funkar typ inte
-		for(j=1;j<=NOPLAYERS;j++){//kollar om ip addressen redan anslutit
-			printf("nya:%s\ngammla:%s\n",s,thread_args[j].ip);
+		for(j=1;j>=4;j++){//kollar om ip addressen redan anslutit
 			if(!strcmp(thread_args[j].ip,s)){
-				printf("byter %s\n", s);
 				ipprev=j;
 				break;
 			}
 		}
 
-		if (!ipprev){
-			thread_args[n].fd=new_fd;
-			thread_args[n].player=i;
-			strcpy(thread_args[n].ip,s);
-			pthread_create (&thread_id[n], NULL, &clithread, &thread_args[n]);
-			n++;
-		}else{//ska återanvanda gammla trådar för gammla ipaddresser, fast tror inte de går
-			thread_args[ipprev].fd=new_fd;
-			pthread_create (&thread_id[ipprev], NULL, &clithread, &thread_args[ipprev]);// så kanske funkar iaf 
-			ipprev=0;
-		}
+		//if (!ipprev){
+			thread_args[i].fd=new_fd;
+			thread_args[i].player=i;
+			thread_args[i].ip=s;
+			pthread_create (&thread_id[i], NULL, &clithread, &thread_args[i]);
+			i++;
+		//}else{//ska återanvanda gammla trådar för gammla ipaddresser
+		//	thread_args[j].fd=new_fd;
+		//	ipprev=0;
+		//}
 		
 		}
 
