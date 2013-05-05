@@ -111,7 +111,11 @@ void* clithread (void* grej){
 
 	for(;;){
             	
-       	buf=hear(cli->sockfd,bufstr);//!!!!!behöver timeout !!!!!!! kanske även en ticker som dödar efter visst antal sek!!
+       	//buf=hear(cli->sockfd,bufstr);//!!!!!behöver timeout !!!!!!! kanske även en ticker som dödar efter visst antal sek!!
+        if (!beejsrecv(cli->sockfd,bufstr)){
+        	printf("timeout!\n");
+
+        }
         printf("bufstr: %s\n",bufstr);
         if(pthread_mutex_trylock(&mtest[cli->player])){// to try or to not try that is the question?
    			//sprintf(mystruct.test[cli->player], "%d", buf);
@@ -125,7 +129,7 @@ void* clithread (void* grej){
          	prat(skicka);
          			
         }
-   		sleep(1);//ska vara usleep(500);
+   		usleep(50);//ska vara usleep(500);
 	}
 
 }
@@ -262,7 +266,7 @@ int main(void)
 		int j,ipprev=0;
 		//funkar typ inte
 		for(j=1;j<=NOPLAYERS;j++){//kollar om ip addressen redan anslutit
-			printf("nya:%s\ngammla:%s\n",s,thread_args[j].ip);
+			//printf("nya:%s\ngammla:%s\n",s,thread_args[j].ip);
 			if(!strcmp(thread_args[j].ip,s)){
 				printf("byter %s\n", s);
 				ipprev=j;
@@ -270,16 +274,20 @@ int main(void)
 			}
 		}
 
-		if (!ipprev){
+		if (ipprev == 0){
 			thread_args[n].fd=new_fd;
 			thread_args[n].player=i;
 			strcpy(thread_args[n].ip,s);
+			
 			pthread_create (&thread_id[n], NULL, &clithread, &thread_args[n]);
+			
 			n++;
+			//printf("FÖRSTA RAD IF\n");
 		}else{//ska återanvanda gammla trådar för gammla ipaddresser, fast tror inte de går
 			thread_args[ipprev].fd=new_fd;
 			pthread_create (&thread_id[ipprev], NULL, &clithread, &thread_args[ipprev]);// så kanske funkar iaf 
 			ipprev=0;
+			//printf("ANDRA RAD IF\n");
 		}
 		
 		}
