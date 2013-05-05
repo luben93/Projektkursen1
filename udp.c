@@ -160,20 +160,13 @@ return sockfd;
 }
 
 
-int beejsrecv(int sockfd,char buf[MAXBUFLEN]){
-	
-	int numbytes;
+int beejssend(int sockfd){
+	//måste särlägga bind / recv
+		int numbytes;
 	struct sockaddr_storage their_addr;
-	//char buf[MAXBUFLEN];
+	char buf[MAXBUFLEN];
 	socklen_t addr_len;
 	char s[INET6_ADDRSTRLEN];
-
-	struct timeval tv;
-
-	tv.tv_sec = 30;  /* 30 Secs Timeout */
-	tv.tv_usec = 0;  // Not init'ing this can cause strange errors
-
-	setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, (char *)&tv,sizeof(struct timeval));
 
 	addr_len = sizeof their_addr;
 	if ((numbytes = recvfrom(sockfd, buf, MAXBUFLEN-1 , 0,
@@ -253,7 +246,6 @@ if (count==-1) {
 } else {
     //handle_datagram(buffer,count);
 }
-printf("ud fucking p: %s\n",buffer);
 return atoi(buffer);
 }
 
