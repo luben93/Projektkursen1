@@ -1,0 +1,74 @@
+# depslib dependency file v1.0
+1353754662 source:c:\users\luben gamer\dropbox\kth\projektkursen1\cod\test3\main.cpp
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<stdlib.h>
+
+1326638152 c:\users\luben gamer\desktop\freeglut\include\gl\glut.h
+	"freeglut_std.h"
+
+1326638396 c:\users\luben gamer\desktop\freeglut\include\gl\freeglut_std.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1367794905 source:c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\lucas.cpp
+	<iostream>
+	<ctime>
+	"Player.h"
+	<stdlib.h>
+	<math.h>
+	<vector>
+	<sys/time.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<OpenGL/OpenGL.h>
+	<GLUT/glut.h>
+	"Platform.cpp"
+	<sys/time.h>
+	"Platform.cpp"
+	<GL/glut.h>
+	<time.h>
+	<GL/glut.h>
+	"Platform.cpp"
+	<time.h>
+	<GL/glut.h>
+	"Platform.h"
+
+1367488710 c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\player.h
+
+1367793773 c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\platform.cpp
+	"Platform.h"
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<OpenGL/OpenGL.h>
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+
+1367486157 c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\platform.h
+
+1367793773 source:c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\platform.cpp
+	"Platform.h"
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<OpenGL/OpenGL.h>
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+
+1367793773 source:c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\player.cpp
+	"Player.h"
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<OpenGL/OpenGL.h>
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<iostream>
+

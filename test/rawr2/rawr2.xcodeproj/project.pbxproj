@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F4B0A27173600C300875DB3 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F4B0A1E173600C300875DB3 /* Player.cpp */; };
+		5F4B0A28173600C300875DB3 /* Platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F4B0A1F173600C300875DB3 /* Platform.cpp */; };
+		5F4B0A2A173600C300875DB3 /* steff.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F4B0A21173600C300875DB3 /* steff.cpp */; };
+		5F4B0A2B173600C300875DB3 /* udp.c in Sources */ = {isa = PBXBuildFile; fileRef = 5F4B0A22173600C300875DB3 /* udp.c */; };
+		5FCA7D061736023F00BD50E6 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCA7D051736023F00BD50E6 /* SDL.framework */; };
 		5FDDD6401728275E0032FFA2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FDDD63F1728275E0032FFA2 /* main.cpp */; };
 		5FDDD6421728275E0032FFA2 /* rawr2.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FDDD6411728275E0032FFA2 /* rawr2.1 */; };
-		5FDDD65217283D8F0032FFA2 /* steff.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FDDD64C17283D8F0032FFA2 /* steff.cpp */; };
-		5FDDD65317283D8F0032FFA2 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FDDD64D17283D8F0032FFA2 /* Player.cpp */; };
-		5FDDD65417283D8F0032FFA2 /* Platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FDDD64E17283D8F0032FFA2 /* Platform.cpp */; };
 		5FDDD65717283E520032FFA2 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FDDD65617283E520032FFA2 /* GLUT.framework */; };
 		5FDDD65917283E5D0032FFA2 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FDDD65817283E5D0032FFA2 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
@@ -30,15 +32,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5F4B0A1E173600C300875DB3 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = "../../../mareks del/Programering/PlatformProjekt/Source/Player.cpp"; sourceTree = "<group>"; };
+		5F4B0A1F173600C300875DB3 /* Platform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Platform.cpp; path = "../../../mareks del/Programering/PlatformProjekt/Source/Platform.cpp"; sourceTree = "<group>"; };
+		5F4B0A21173600C300875DB3 /* steff.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steff.cpp; path = "../../../mareks del/Programering/PlatformProjekt/Source/steff.cpp"; sourceTree = "<group>"; };
+		5F4B0A22173600C300875DB3 /* udp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = udp.c; path = "../../../mareks del/Programering/PlatformProjekt/Source/udp.c"; sourceTree = "<group>"; };
+		5F4B0A23173600C300875DB3 /* udp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = udp.h; path = "../../../mareks del/Programering/PlatformProjekt/Source/udp.h"; sourceTree = "<group>"; };
+		5F4B0A24173600C300875DB3 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = "../../../mareks del/Programering/PlatformProjekt/Source/Player.h"; sourceTree = "<group>"; };
+		5F4B0A25173600C300875DB3 /* Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Platform.h; path = "../../../mareks del/Programering/PlatformProjekt/Source/Platform.h"; sourceTree = "<group>"; };
+		5F4B0A26173600C300875DB3 /* cave.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = cave.bmp; path = "../../../mareks del/Programering/PlatformProjekt/Source/cave.bmp"; sourceTree = "<group>"; };
+		5FCA7D051736023F00BD50E6 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = ../../../../../../../Library/Frameworks/SDL.framework; sourceTree = "<group>"; };
 		5FDDD63C1728275E0032FFA2 /* rawr2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = rawr2; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FDDD63F1728275E0032FFA2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5FDDD6411728275E0032FFA2 /* rawr2.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = rawr2.1; sourceTree = "<group>"; };
-		5FDDD64917283D8F0032FFA2 /* cave.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = cave.bmp; path = ../../Source/cave.bmp; sourceTree = "<group>"; };
-		5FDDD64A17283D8F0032FFA2 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = ../../Source/Player.h; sourceTree = "<group>"; };
-		5FDDD64C17283D8F0032FFA2 /* steff.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steff.cpp; path = ../../../Source/steff.cpp; sourceTree = "<group>"; };
-		5FDDD64D17283D8F0032FFA2 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../../Source/Player.cpp; sourceTree = "<group>"; };
-		5FDDD64E17283D8F0032FFA2 /* Platform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Platform.cpp; path = ../../Source/Platform.cpp; sourceTree = "<group>"; };
-		5FDDD65017283D8F0032FFA2 /* Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Platform.h; path = ../../Source/Platform.h; sourceTree = "<group>"; };
 		5FDDD65617283E520032FFA2 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		5FDDD65817283E5D0032FFA2 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -48,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FCA7D061736023F00BD50E6 /* SDL.framework in Frameworks */,
 				5FDDD65917283E5D0032FFA2 /* OpenGL.framework in Frameworks */,
 				5FDDD65717283E520032FFA2 /* GLUT.framework in Frameworks */,
 			);
@@ -59,13 +65,9 @@
 		5FDDD6331728275E0032FFA2 = {
 			isa = PBXGroup;
 			children = (
+				5FCA7D051736023F00BD50E6 /* SDL.framework */,
 				5FDDD65817283E5D0032FFA2 /* OpenGL.framework */,
 				5FDDD65617283E520032FFA2 /* GLUT.framework */,
-				5FDDD64917283D8F0032FFA2 /* cave.bmp */,
-				5FDDD64A17283D8F0032FFA2 /* Player.h */,
-				5FDDD64D17283D8F0032FFA2 /* Player.cpp */,
-				5FDDD64E17283D8F0032FFA2 /* Platform.cpp */,
-				5FDDD65017283D8F0032FFA2 /* Platform.h */,
 				5FDDD63E1728275E0032FFA2 /* rawr2 */,
 				5FDDD63D1728275E0032FFA2 /* Products */,
 			);
@@ -82,7 +84,14 @@
 		5FDDD63E1728275E0032FFA2 /* rawr2 */ = {
 			isa = PBXGroup;
 			children = (
-				5FDDD64C17283D8F0032FFA2 /* steff.cpp */,
+				5F4B0A1E173600C300875DB3 /* Player.cpp */,
+				5F4B0A1F173600C300875DB3 /* Platform.cpp */,
+				5F4B0A21173600C300875DB3 /* steff.cpp */,
+				5F4B0A22173600C300875DB3 /* udp.c */,
+				5F4B0A23173600C300875DB3 /* udp.h */,
+				5F4B0A24173600C300875DB3 /* Player.h */,
+				5F4B0A25173600C300875DB3 /* Platform.h */,
+				5F4B0A26173600C300875DB3 /* cave.bmp */,
 				5FDDD63F1728275E0032FFA2 /* main.cpp */,
 				5FDDD6411728275E0032FFA2 /* rawr2.1 */,
 			);
@@ -141,9 +150,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FDDD6401728275E0032FFA2 /* main.cpp in Sources */,
-				5FDDD65217283D8F0032FFA2 /* steff.cpp in Sources */,
-				5FDDD65317283D8F0032FFA2 /* Player.cpp in Sources */,
-				5FDDD65417283D8F0032FFA2 /* Platform.cpp in Sources */,
+				5F4B0A27173600C300875DB3 /* Player.cpp in Sources */,
+				5F4B0A28173600C300875DB3 /* Platform.cpp in Sources */,
+				5F4B0A2A173600C300875DB3 /* steff.cpp in Sources */,
+				5F4B0A2B173600C300875DB3 /* udp.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +252,7 @@
 				5FDDD6471728275E0032FFA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

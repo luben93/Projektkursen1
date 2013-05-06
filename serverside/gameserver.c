@@ -18,6 +18,7 @@
 #include <pthread.h>
 #include "udp.h"
 
+
 //gcc -DNDEBUGG server.c -o serverfinal
 
 #define PORT "3490"  // the port users will be connecting to
