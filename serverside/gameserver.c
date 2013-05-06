@@ -121,6 +121,7 @@ void* clithread (void* grej){
         if(pthread_mutex_trylock(&mtest[cli->player])){// to try or to not try that is the question?
    			//sprintf(mystruct.test[cli->player], "%d", buf);
    			strcpy(mystruct.test[cli->player],bufstr);
+   			printf("%s",mystruct.test[cli->player]);
          	pthread_mutex_unlock(&mtest[cli->player]);
         }
         //printf("global struct contains:%s\n",mystruct.test[cli->player]);
@@ -275,21 +276,21 @@ int main(void)
 			}
 		}
 
-		if (ipprev == 0){
+		//if (ipprev == 0){
 			thread_args[n].fd=new_fd;
-			thread_args[n].player=i;
+			thread_args[n].player=n;
 			strcpy(thread_args[n].ip,s);
 			
 			pthread_create (&thread_id[n], NULL, &clithread, &thread_args[n]);
 			
 			n++;
 			//printf("FÖRSTA RAD IF\n");
-		}else{//ska återanvanda gammla trådar för gammla ipaddresser, fast tror inte de går
+		/*}else{//ska återanvanda gammla trådar för gammla ipaddresser, fast tror inte de går
 			thread_args[ipprev].fd=new_fd;
 			pthread_create (&thread_id[ipprev], NULL, &clithread, &thread_args[ipprev]);// så kanske funkar iaf 
 			ipprev=0;
 			//printf("ANDRA RAD IF\n");
-		}
+		}*/
 		
 		}
 
