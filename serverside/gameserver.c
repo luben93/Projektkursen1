@@ -43,10 +43,7 @@ pthread_mutex_t mtest[NOPLAYERS] = PTHREAD_MUTEX_INITIALIZER;
 
 typedef struct 
  {
-    int active[NOPLAYERS];
-	int posx[NOPLAYERS];
-	int posy[NOPLAYERS];
-	int action[NOPLAYERS];
+ 	int actplayer[NOPLAYERS+1];
 	char test[NOPLAYERS][MAXSIZE];
  } TESTSTRUCT;
 
@@ -62,7 +59,7 @@ struct cli_param
 {
   int fd;
   int player;
-  int sockfd;
+  int udpfd;
   int port;
   //char ip[INET6_ADDRSTRLEN];
   char ip[20];
@@ -106,23 +103,49 @@ void* clithread (void* grej){
 	int buf,j;
 	char bufstr[MAXSIZE];
 	//!!!!!behöver timeout !!!!!! kanske även en ticker som dödar efter visst antal sek
-	//cli->sockfd=beejsconnect(portstr);
-	cli->sockfd=create(portstr);
-	printf("%d\n",cli->sockfd);
+	cli->udpfd=beejsconnect(portstr);
+	//cli->sockfd=create(portstr);
+	printf("%d\n",cli->udpfd);
 
 	for(;;){
             	
-       	//buf=hear(cli->sockfd,bufstr);//!!!!!behöver timeout !!!!!!! kanske även en ticker som dödar efter visst antal sek!!
-        if (!beejsrecv(cli->sockfd,bufstr)){
+       	//buf=hear(cli->udpfd,bufstr);//!!!!!behöver timeout !!!!!!! kanske även en ticker som dödar efter visst antal sek!!
+        if (!beejsrecv(cli->udpfd,bufstr)){
         	printf("timeout!\n");
-
+        	mystruct.actplayer[cli->player]=0;
+        	strcpy(mystruct.test[cli->player],"0|gone");
+        	close(cli->udpfd);
+        	close(cli->fd);
+        	/*cli->fd=0;
+        	cli->player=0;
+        	cli->port=0;
+        	strcpy(cli->ip,"                    ");
+        	cli->sockfd=0;*/
+        	
+        	pthread_exit(NULL);
         }
+
         printf("bufstr: %s\n",bufstr);
+
+        if (!strcmp(bufstr,"godnatt")){
+        	mystruct.actplayer[cli->player]=0;
+			strcpy(mystruct.test[cli->player],"0|gone");
+        	/*cli->fd=0;
+        	cli->player=0;
+        	cli->port=0;
+        	strcpy(cli->ip,"                    ");
+        	cli->sockfd=0;*/
+
+        	pthread_exit(NULL);
+        }
         if(pthread_mutex_trylock(&mtest[cli->player])){// to try or to not try that is the question?
    			//sprintf(mystruct.test[cli->player], "%d", buf);
    			strcpy(mystruct.test[cli->player],bufstr);
-   			printf("%s",mystruct.test[cli->player]);
+   			printf("%s\n",mystruct.test[cli->player]);
+   			strcpy(bufstr,"");
          	pthread_mutex_unlock(&mtest[cli->player]);
+        }else{
+        	//printf("mutex fail\n");
         }
         //printf("global struct contains:%s\n",mystruct.test[cli->player]);
 		for(j=1;j<NOPLAYERS+1;j++){//sends every players buf
@@ -131,7 +154,7 @@ void* clithread (void* grej){
          	prat(skicka);
          			
         }
-   		usleep(50);//ska vara usleep(500);
+   		usleep(40);
 	}
 
 }
@@ -173,7 +196,7 @@ int main(void)
   	int round = 0;
 
   	pthread_t thread_id[NOPLAYERS];
-  	pthread_t nyaid;
+  	//pthread_t nyaid;
   	struct cli_param thread_args[NOPLAYERS];
   	//struct serverthread_params posthreadargs;
 	//  pthread_create (&nyaid,NULL,&spelsync,&posthreadargs);
@@ -242,12 +265,13 @@ int main(void)
 
 	printf("server: waiting for connections...\n");
 	
-	for (i=1;i<NOPLAYERS;i++){
+	for (i=0;i<NOPLAYERS;i++){
 		strcpy(thread_args[i].ip,"                  ");
 		thread_args[i].fd=0;
 		thread_args[i].player=0;
 		thread_args[i].port=0;
-		thread_args[i].sockfd=0;
+		thread_args[i].udpfd=0;
+		mystruct.actplayer[i]=0;
 	}
 
 	while(1) {  // main accept() loop
@@ -260,37 +284,67 @@ int main(void)
 
 		inet_ntop(their_addr.ss_family,
 			get_in_addr((struct sockaddr *)&their_addr),s, sizeof s);
-		printf("server: got connection from player %d on %s \n", n,s);
+		
+
+
+
 
 		//!!!!!!!!!!!
 		//!!!kolla om en ny spelare har samma ip som en gammal och lägg in den nya på den gammla tråden
 		//!!!!!!!!!!!
 		int j,ipprev=0;
 		//funkar typ inte
-		for(j=1;j<=NOPLAYERS;j++){//kollar om ip addressen redan anslutit
+		/*for(j=1;j<=NOPLAYERS;j++){//kollar om ip addressen redan anslutit
 			//printf("nya:%s\ngammla:%s\n",s,thread_args[j].ip);
 			if(!strcmp(thread_args[j].ip,s)){
 				printf("byter %s\n", s);
 				ipprev=j;
 				break;
 			}
+		}*/
+
+
+
+		for (n=1;n<NOPLAYERS;n++){
+			
+			if(mystruct.actplayer[n]!=1){
+
+				pthread_t nyaid[n];
+
+				thread_args[n].fd=new_fd;
+				thread_args[n].player=n;
+				strcpy(thread_args[n].ip,s);
+				//printf("%d\n",n);
+				//sleep(2);
+				mystruct.actplayer[n]=1;
+				pthread_create (&nyaid[n], NULL, &clithread, &thread_args[n]);
+				printf("server: got connection from player %d on %s \n", n,s);
+				n=NOPLAYERS+1;
+				break;
+			}
+			printf("nobreak :o\n");
+			sleep(2);
 		}
 
+		if(n==NOPLAYERS){
+				send(new_fd,"inga slots lediga",MAXSIZE,0);
+		}
+		
 		//if (ipprev == 0){
-			thread_args[n].fd=new_fd;
-			thread_args[n].player=n;
-			strcpy(thread_args[n].ip,s);
+		//		thread_args[n].fd=new_fd;
+		//		thread_args[n].player=n;
+			//	strcpy(thread_args[n].ip,s);
 			
-			pthread_create (&thread_id[n], NULL, &clithread, &thread_args[n]);
+			//	pthread_create (&thread_id[n], NULL, &clithread, &thread_args[n]);
 			
-			n++;
+			//n++;
 			//printf("FÖRSTA RAD IF\n");
 		/*}else{//ska återanvanda gammla trådar för gammla ipaddresser, fast tror inte de går
 			thread_args[ipprev].fd=new_fd;
 			pthread_create (&thread_id[ipprev], NULL, &clithread, &thread_args[ipprev]);// så kanske funkar iaf 
 			ipprev=0;
 			//printf("ANDRA RAD IF\n");
-		}*/
+		}//*/
 		
 		}
 
