@@ -34,6 +34,79 @@ void *get_in_addr(struct sockaddr *sa)
 	return &(((struct sockaddr_in6*)sa)->sin6_addr);
 }
 
+
+
+int tcpanslut(char *ip)
+{
+	int sockfd, numbytes,test;
+	char buf[MAXSIZE];
+	struct addrinfo hints, *servinfo, *p;
+	int rv;
+	char s[INET6_ADDRSTRLEN];
+
+
+	memset(&hints, 0, sizeof hints);
+	hints.ai_family = AF_UNSPEC;
+	hints.ai_socktype = SOCK_STREAM;
+
+	if ((rv = getaddrinfo(ip, PORT, &hints, &servinfo)) != 0) {//Ersätt ADRESS med argv[1]
+		fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(rv));
+		return 1;
+	}
+
+	// loop through all the results and connect to the first we can
+	for(p = servinfo; p != NULL; p = p->ai_next) {
+		if ((sockfd = socket(p->ai_family, p->ai_socktype,
+				p->ai_protocol)) == -1) {
+			perror("client: socket");
+			continue;
+		}
+
+		if (connect(sockfd, p->ai_addr, p->ai_addrlen) == -1) {
+#ifdef _WIN32
+		closesocket(sockfd);
+#else
+		close(sockfd);
+#endif
+
+			perror("client: connect");
+			continue;
+		}
+
+		break;
+	}
+
+	if (p == NULL) {
+		fprintf(stderr, "client: failed to connect\n");
+		return 2;
+	}
+
+
+	inet_ntop(p->ai_family, get_in_addr((struct sockaddr *)p->ai_addr),s, sizeof s);
+	printf("client: connecting to %s\n", s);
+
+	freeaddrinfo(servinfo); // all done with this structure
+
+	if((numbytes = recv(sockfd, buf, MAXSIZE-1, 0)) == -1) {
+		perror("recv");
+    		exit(1);
+		}
+
+	if (send(sockfd, "helloworld", 4, 0) == -0) {
+  	   	perror("send");
+   	   		exit(1);
+   	  	}
+
+#ifdef _WIN32
+	test=closesocket(sockfd);assert(test==0);
+#else
+	test=close(sockfd);assert(test==0);
+#endif
+
+	printf("Recv: %s\n", buf);
+	return atoi(buf);
+}
+
 int beejsconnect(char *portnr)
 {
 	int sockfd;
@@ -94,7 +167,7 @@ int beejsrecv(int sockfd,char buf[MAXBUFLEN]){
 
 	struct timeval tv;
 
-	tv.tv_sec = 30;  /* 30 Secs Timeout */
+	tv.tv_sec = 10;  /* 30 Secs Timeout */
 	tv.tv_usec = 0;  // Not init'ing this can cause strange errors
 
 	setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, (char *)&tv,sizeof(struct timeval));
@@ -176,4 +249,52 @@ int prat (char *argv[])
     close(sockfd);
 
     return 0;
+}
+
+
+int logout(char *port){
+
+    int sockfd;
+    struct addrinfo hints, *servinfo, *p;
+    int rv;
+    int numbytes;
+
+        ////printf("helloworld\nip:%s\nmessage:%s\n",argv[1],argv[2]);
+    memset(&hints, 0, sizeof hints);
+    hints.ai_family = AF_UNSPEC;
+    hints.ai_socktype = SOCK_DGRAM;
+
+    if ((rv = getaddrinfo(IP, port, &hints, &servinfo)) != 0) {
+        fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(rv));
+        return 1;
+    }
+
+    // loop through all the results and make a socket
+    for(p = servinfo; p != NULL; p = p->ai_next) {
+        if ((sockfd = socket(p->ai_family, p->ai_socktype,
+                p->ai_protocol)) == -1) {
+            perror("talker: socket");
+            continue;
+        }
+
+        break;
+    }
+
+    if (p == NULL) {
+        fprintf(stderr, "talker: failed to bind socket\n");
+        return 2;
+    }
+
+    if ((numbytes = sendto(sockfd, "logoff", strlen("logoff"), 0,
+             p->ai_addr, p->ai_addrlen)) == -1) {
+        perror("talker: sendto");
+        return 2;
+    }
+
+    freeaddrinfo(servinfo);
+
+    printf("talker: sent %d bytes to %s\n", numbytes,"logoff");
+    close(sockfd);
+
+	return 0;
 }
