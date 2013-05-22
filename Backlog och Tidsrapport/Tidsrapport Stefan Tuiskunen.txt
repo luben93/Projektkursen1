@@ -1,0 +1,71 @@
+Datum:		tid:		Aktivitet:		Start:	Stop:
+
+27/03 		2.5 timmar	möte			12.00	14.30
+
+11/03 		4 timmar	server client. 
+				backlog. rita. 		13.00	17.00
+
+11/04 		1 timme		client server 
+				kommunikation 		12.00 	13.00
+
+16/04  		ca 6 timmar	client/server. c++. openGL
+
+17/04 		ca 6 timmar 	openGL. glew
+
+lite här o där kanske 5 timmar..
+
+18/04 		ca 3 timmar 	sdl
+
+19-22/04 	minst 5 tim	allt möjligt
+
+23/04 		ca 6 timmar 	glut
+
+lite här o där under perioden också
+
+_____38,5 tot
+
+24/4 		10 timmar 	client, opengl, grafik, server, motor
+
+25/4 		5 timmar	alla områden framöver. mindre på servern
+
+26/4 		5 timmar
+
+1/5 		6 timmar
+
+2/5 		3 timmar
+
+3/5 		3 timmar
+
+lite här o där under perioden också
+
+______32 tot
+
+6/5 		7 timmar
+
+9/5 		3 timmar
+
+13/5 		7 timmar
+
+14/5 		11 timmar
+
+15/5 		4 timmar
+
+17/5 		9 timmar
+
+19/5 		5 timmar
+
+20/5 		11 timmar
+
+lite här o där under perioden också
+
+____57 tot
+
+tot.tot 127.5 
+
+21/5 		-		muntlig redovisning
+
+
+
+
+ 
+

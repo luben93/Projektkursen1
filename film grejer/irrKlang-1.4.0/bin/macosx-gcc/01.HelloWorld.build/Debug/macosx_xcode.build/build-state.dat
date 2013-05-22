@@ -1,0 +1,418 @@
+Tmacosx_xcode
+v5
+r1
+cCheck dependencies
+cCompileC ../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects-normal/i386/main.o /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cLd /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld normal i386
+cPhaseScriptExecution "Run Script" /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Script-23CDAAE90C51E99B003DA087.sh
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+c0000000051706AE100000000000000AA
+t1366321889
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/math.h
+c000000005146F8D600000000000066C2
+t1363605718
+s26306
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/memory.h
+c000000005146F8D60000000000000765
+t1363605718
+s1893
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stdio.h
+c000000005146F8D70000000000004523
+t1363605719
+s17699
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stdlib.h
+c000000005146F8D70000000000003089
+t1363605719
+s12425
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/ioctl.h
+c000000005146F8D7000000000000116C
+t1363605719
+s4460
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/termios.h
+c000000005146F8D700000000000004D4
+t1363605719
+s1236
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/unistd.h
+c000000005146F8D70000000000006762
+t1363605719
+s26466
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld
+t1369046717
+s10172
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects-normal/i386/01.HelloWorld.LinkFileList
+c000000005199FC480000000000000098
+t1369046088
+s152
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects-normal/i386/main.o
+t1369046614
+s25336
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Script-23CDAAE90C51E99B003DA087.sh
+c000000005199FC48000000000000008A
+t1369046088
+s138
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/libirrklang.dylib
+c000000004FC85F3C000000000015F2AC
+t1338531644
+s1438380
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_ESoundEngineOptions.h
+c000000004959B6200000000000001057
+t1230616096
+s4183
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_ESoundOutputDrivers.h
+c000000004B7B81FE00000000000008F1
+t1266385406
+s2289
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_EStreamModes.h
+c000000004959B620000000000000033D
+t1230616096
+s829
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_IAudioRecorder.h
+c000000004959C2720000000000001441
+t1230619250
+s5185
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_IAudioStream.h
+c000000004959B62000000000000006C8
+t1230616096
+s1736
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_IAudioStreamLoader.h
+c000000004959B62000000000000004DA
+t1230616096
+s1242
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_IFileFactory.h
+c000000004959B6200000000000000601
+t1230616096
+s1537
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_IFileReader.h
+c000000004959B620000000000000068C
+t1230616096
+s1676
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_IRefCounted.h
+c00000000498A75860000000000001266
+t1233810822
+s4710
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_ISound.h
+c000000004FC6F7120000000000002727
+t1338439442
+s10023
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_ISoundDeviceList.h
+c000000004959B62000000000000006A8
+t1230616096
+s1704
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_ISoundEffectControl.h
+c000000004959B6200000000000003817
+t1230616096
+s14359
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_ISoundEngine.h
+c000000004FC6F6CC0000000000006F54
+t1338439372
+s28500
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_ISoundMixedOutputReceiver.h
+c000000004B7B87B00000000000000723
+t1266386864
+s1827
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_ISoundSource.h
+c000000004959B620000000000000269D
+t1230616096
+s9885
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_ISoundStopEventReceiver.h
+c000000004959B6200000000000000BC9
+t1230616096
+s3017
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_IVirtualRefCounted.h
+c00000000498A6FF6000000000000051A
+t1233809398
+s1306
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_SAudioStreamFormat.h
+c000000004959B62200000000000006B1
+t1230616098
+s1713
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_irrKlangTypes.h
+c000000004959B620000000000000093C
+t1230616096
+s2364
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/ik_vec3d.h
+c000000004959B62200000000000020BE
+t1230616098
+s8382
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../include/irrKlang.h
+c000000004FC6F35E0000000000008AFD
+t1338438494
+s35581
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../common/conio.h
+c00000000475A3D440000000000000913
+t1197096260
+s2323
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/main.cpp
+c0000000047B680B20000000000000AF4
+t1203142834
+s2804
+i<stdio.h>
+i<irrKlang.h>
+i<conio.h>
+i"../common/conio.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/examples/common/conio.h
+c00000000475A3D440000000000000913
+t1197096260
+s2323
+i<termios.h>
+i<unistd.h>
+i<stdio.h>
+i<memory.h>
+i<stdlib.h>
+i<termios.h>
+i<unistd.h>
+i<stdio.h>
+i<memory.h>
+i<stdlib.h>
+i<sys/ioctl.h>
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_ESoundEngineOptions.h
+c000000004959B6200000000000001057
+t1230616096
+s4183
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_ESoundOutputDrivers.h
+c000000004B7B81FE00000000000008F1
+t1266385406
+s2289
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_EStreamModes.h
+c000000004959B620000000000000033D
+t1230616096
+s829
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_IAudioRecorder.h
+c000000004959C2720000000000001441
+t1230619250
+s5185
+i"ik_IRefCounted.h"
+i"ik_ISoundSource.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_IAudioStream.h
+c000000004959B62000000000000006C8
+t1230616096
+s1736
+i"ik_IRefCounted.h"
+i"ik_SAudioStreamFormat.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_IAudioStreamLoader.h
+c000000004959B62000000000000004DA
+t1230616096
+s1242
+i"ik_IRefCounted.h"
+i"ik_IFileReader.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_IFileFactory.h
+c000000004959B6200000000000000601
+t1230616096
+s1537
+i"ik_IRefCounted.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_IFileReader.h
+c000000004959B620000000000000068C
+t1230616096
+s1676
+i"ik_IRefCounted.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_IRefCounted.h
+c00000000498A75860000000000001266
+t1233810822
+s4710
+i"ik_irrKlangTypes.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_ISound.h
+c000000004FC6F7120000000000002727
+t1338439442
+s10023
+i"ik_IVirtualRefCounted.h"
+i"ik_ISoundEffectControl.h"
+i"ik_vec3d.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_ISoundDeviceList.h
+c000000004959B62000000000000006A8
+t1230616096
+s1704
+i"ik_IRefCounted.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_ISoundEffectControl.h
+c000000004959B6200000000000003817
+t1230616096
+s14359
+i"ik_IVirtualRefCounted.h"
+i"ik_vec3d.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_ISoundEngine.h
+c000000004FC6F6CC0000000000006F54
+t1338439372
+s28500
+i"ik_IRefCounted.h"
+i"ik_vec3d.h"
+i"ik_ISoundSource.h"
+i"ik_ISound.h"
+i"ik_EStreamModes.h"
+i"ik_IFileFactory.h"
+i"ik_ISoundMixedOutputReceiver.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_ISoundMixedOutputReceiver.h
+c000000004B7B87B00000000000000723
+t1266386864
+s1827
+i"ik_IRefCounted.h"
+i"ik_SAudioStreamFormat.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_ISoundSource.h
+c000000004959B620000000000000269D
+t1230616096
+s9885
+i"ik_IVirtualRefCounted.h"
+i"ik_vec3d.h"
+i"ik_EStreamModes.h"
+i"ik_SAudioStreamFormat.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_ISoundStopEventReceiver.h
+c000000004959B6200000000000000BC9
+t1230616096
+s3017
+i"ik_IRefCounted.h"
+i"ik_SAudioStreamFormat.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_IVirtualRefCounted.h
+c00000000498A6FF6000000000000051A
+t1233809398
+s1306
+i"ik_irrKlangTypes.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_SAudioStreamFormat.h
+c000000004959B62200000000000006B1
+t1230616098
+s1713
+i"ik_IRefCounted.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_irrKlangTypes.h
+c000000004959B620000000000000093C
+t1230616096
+s2364
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/ik_vec3d.h
+c000000004959B62200000000000020BE
+t1230616098
+s8382
+i<math.h>
+i"ik_irrKlangTypes.h"
+
+N/Users/luben/Desktop/irrKlang-1.4.0/include/irrKlang.h
+c000000004FC6F35E0000000000008AFD
+t1338438494
+s35581
+i"ik_irrKlangTypes.h"
+i"ik_vec3d.h"
+i"ik_IRefCounted.h"
+i"ik_IVirtualRefCounted.h"
+i"ik_ESoundOutputDrivers.h"
+i"ik_ESoundEngineOptions.h"
+i"ik_EStreamModes.h"
+i"ik_SAudioStreamFormat.h"
+i"ik_ISoundEngine.h"
+i"ik_ISoundSource.h"
+i"ik_ISound.h"
+i"ik_IAudioStream.h"
+i"ik_IAudioStreamLoader.h"
+i"ik_ISoundEffectControl.h"
+i"ik_ISoundStopEventReceiver.h"
+i"ik_IFileFactory.h"
+i"ik_IFileReader.h"
+i"ik_ISoundDeviceList.h"
+i"ik_IAudioRecorder.h"
+i"ik_ISoundMixedOutputReceiver.h"
+
+CBuild AST from /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/main.cpp
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesd8494962364ab741^30bb5b62364ab741^---0#1#0#--18"Check dependencies36"D7EFCC13-6A84-423F-9C49-FD15DD4296B2-
+
+CCompileC ../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects-normal/i386/main.o /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/main.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390738888.244724
+e390738888.599468
+r1
+xCompileC
+x../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects-normal/i386/main.o
+x/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/main.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/main.cppa7753fc8334ab741^6d7599c8334ab741^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/main.cpp0000000000000000^2451"CompileC ../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects-normal/i386/main.o main.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -I/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/01.HelloWorld.hmap -I/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/include -I../../include -I/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/DerivedSources/i386 -I/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/DerivedSources -F/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc -MMD -MT dependencies -MF /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects-normal/i386/main.dia -c /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/main.cpp -o /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects-normal/i386/main.o36"67994A6B-3851-4A32-9F45-778A43185B1F-
+
+CCompileC ../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects-normal/i386/main.o /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s390739413.939694
+e390739414.128487
+r1
+xCompileC
+x../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects-normal/i386/main.o
+x/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/main.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/main.cpp21aef0d5354ab741^04e320d6354ab741^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/main.cpp0000000000000000^1488"CompileC ../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects-normal/i386/main.o main.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -mmacosx-version-min=10.8 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -I/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/01.HelloWorld.hmap -I/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/include -I../../include -I/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/DerivedSources/i386 -I/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/DerivedSources -F/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc -c /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/main.cpp -o /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects-normal/i386/main.o36"23EEEEDC-AC98-486E-B491-2A0C37F0A27C-
+
+CLd /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld normal i386
+s390739414.134814
+e390739414.320143
+r1
+xLd
+x/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld
+xnormal
+xi386
+old: warning: directory not found for option '-L/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../../bin/macosx-gcc'
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Link /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorldc49622d6354ab741^a1f851d6354ab741^-131"ld: warning: directory not found for option '-L/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../../bin/macosx-gcc'1(21%IDEActivityLogMessage2@117"Directory not found for option '-L/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../../bin/macosx-gcc'-390739414#0#131#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--0#0#0#--992"Ld ../../bin/macosx-gcc/01.HelloWorld normal i386    cd /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-g++-4.2 -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc -L/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../../bin/macosx-gcc -L/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc -F/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc -filelist /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects-normal/i386/01.HelloWorld.LinkFileList -mmacosx-version-min=10.8 -lirrklang -o /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld36"F044ED3C-56D8-4229-AA4B-978E48DABDB0-
+
+CPhaseScriptExecution "Run Script" /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Script-23CDAAE90C51E99B003DA087.sh
+s390739554.376218
+e390739554.405244
+r1
+xPhaseScriptExecution
+xRun Script
+x/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Script-23CDAAE90C51E99B003DA087.sh
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Run custom shell script 'Run Script'a7926162364ab741^5ebc6762364ab741^---0#0#0#--19417"PhaseScriptExecution "Run Script" ../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Script-23CDAAE90C51E99B003DA087.sh    cd /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER luben    setenv ALWAYS_SEARCH_USER_PATHS YES    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_64_BIT "x86_64 i386"    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_STANDARD_64_BIT x86_64    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc    setenv BUILD_ROOT /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc    setenv CACHE_ROOT /var/folders/0k/87y43v_d4792b90frh4508jc0000gn/C/com.apple.Xcode.501    setenv CCHROOT /var/folders/0k/87y43v_d4792b90frh4508jc0000gn/C/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLASS_FILE_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld    setenv CODE_SIGNING_ALLOWED YES    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/0k/87y43v_d4792b90frh4508jc0000gn/C/com.apple.Xcode.501/CompositeSDKs    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc    setenv CONFIGURATION_TEMP_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Applications/Xcode.app/Contents/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/01.HelloWorld.dst    setenv DT_TOOLCHAIN_DIR /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain    setenv DWARF_DSYM_FILE_NAME 01.HelloWorld.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc    setenv EMBEDDED_PROFILE_NAME embedded.provisionprofile    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLE_NAME 01.HelloWorld    setenv EXECUTABLE_PATH 01.HelloWorld    setenv FILE_LIST /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/FixedFiles    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc\" "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME 01.HelloWorld    setenv GCC3_VERSION 3.3    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_ENABLE_FIX_AND_CONTINUE YES    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_MODEL_TUNING G5    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvmgcc42    setenv GCC_VERSION_IDENTIFIER com_apple_compilers_llvmgcc42    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE NO    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/include\" ../../include"    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_OUTPUT_FORMAT same-as-input    setenv INFOPLIST_PREPROCESS NO    setenv INSTALL_DIR /tmp/01.HelloWorld.dst/Users/luben/bin    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER luben    setenv INSTALL_PATH /Users/luben/bin    setenv INSTALL_ROOT /tmp/01.HelloWorld.dst    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/01.HelloWorld-LinkMap-normal-i386.txt    setenv LD_NO_PIE NO    setenv LEGACY_DEVELOPER_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc\"  \"/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../../bin/macosx-gcc\" \"/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_1 "\"/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../../bin/macosx-gcc\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_2 "\"/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc\""    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects-normal/i386/01.HelloWorld.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACOSX_DEPLOYMENT_TARGET 10.8    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 12D78    setenv MAC_OS_X_VERSION_ACTUAL 1083    setenv MAC_OS_X_VERSION_MAJOR 1080    setenv MAC_OS_X_VERSION_MINOR 0803    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJECT_FILE_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Objects-normal    setenv OBJROOT /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv PACKAGE_TYPE com.apple.package-type.mach-o-executable    setenv PASCAL_STRINGS YES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/usr/bin:/bin:/usr/sbin:/sbin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"    setenv PFE_FILE_C_DIALECTS c++    setenv PKGINFO_FILE_PATH /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv PLATFORM_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform    setenv PLATFORM_NAME macosx    setenv PLATFORM_PREFERRED_ARCH x86_64    setenv PLATFORM_PRODUCT_BUILD_VERSION 4H1003    setenv PLIST_FILE_OUTPUT_FORMAT same-as-input    setenv PREBINDING NO    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRODUCT_NAME 01.HelloWorld    setenv PRODUCT_SETTINGS_PATH     setenv PRODUCT_TYPE com.apple.product-type.tool    setenv PROFILING_CODE NO    setenv PROJECT 01.HelloWorld    setenv PROJECT_DERIVED_FILE_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/DerivedSources    setenv PROJECT_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld    setenv PROJECT_FILE_PATH /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/01.HelloWorld.xcodeproj    setenv PROJECT_NAME 01.HelloWorld    setenv PROJECT_TEMP_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build    setenv PROJECT_TEMP_ROOT /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_HG_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/ResourceManagerResources    setenv REZ_EXECUTABLE YES    setenv REZ_OBJECTS_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPT_INPUT_FILE_0 /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld    setenv SCRIPT_INPUT_FILE_COUNT 1    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk    setenv SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk    setenv SDK_NAME macosx10.8    setenv SDK_PRODUCT_BUILD_VERSION 12D75    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHARED_DERIVED_FILE_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/DerivedSources    setenv SHARED_PRECOMPS_DIR /var/folders/0k/87y43v_d4792b90frh4508jc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld    setenv SRCROOT /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld    setenv STRINGS_FILE_OUTPUT_ENCODING UTF-16    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_PLATFORMS macosx    setenv SYMROOT /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Applications/Xcode.app/Contents/Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Applications/Xcode.app/Contents/Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETNAME macosx_xcode    setenv TARGET_BUILD_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc    setenv TARGET_NAME macosx_xcode    setenv TARGET_TEMP_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build    setenv TEMP_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build    setenv TEMP_FILES_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build    setenv TEMP_FILE_DIR /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build    setenv TEMP_ROOT /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc    setenv TEST_AFTER_BUILD NO    setenv TOOLCHAINS com.apple.dt.toolchain.XcodeDefault    setenv UID 501    setenv UNSTRIPPED_PRODUCT NO    setenv USER luben    setenv USER_APPS_DIR /Users/luben/Applications    setenv USER_LIBRARY_DIR /Users/luben/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS "i386 x86_64"    setenv VERBOSE_PBXCP NO    setenv VERSION_INFO_BUILDER luben    setenv VERSION_INFO_FILE 01.HelloWorld_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:01.HelloWorld  PROJECT:01.HelloWorld-\""    setenv XCODE_APP_SUPPORT_DIR /Applications/Xcode.app/Contents/Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4H1003    setenv XCODE_VERSION_ACTUAL 0462    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0460    setenv YACC yacc    setenv ZERO_LINK YES    /bin/sh -c /Users/luben/Desktop/irrKlang-1.4.0/examples/01.HelloWorld/../../bin/macosx-gcc/01.HelloWorld.build/Debug/macosx_xcode.build/Script-23CDAAE90C51E99B003DA087.sh36"5E821B81-124F-46B4-B4A6-E5212F55D3A9-
+

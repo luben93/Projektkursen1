@@ -1,0 +1,192 @@
+# depslib dependency file v1.0
+1369150731 source:c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\box.cpp
+	"Box.h"
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<OpenGL/OpenGL.h>
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+
+1369150814 c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\box.h
+
+1326638152 c:\users\luben gamer\desktop\freeglut\include\gl\glut.h
+	"freeglut_std.h"
+
+1326638396 c:\users\luben gamer\desktop\freeglut\include\gl\freeglut_std.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1369049652 source:c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\otherplayer.cpp
+	"OtherPlayer.h"
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<OpenGL/OpenGL.h>
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<iostream>
+
+1369035871 c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\otherplayer.h
+
+1368530717 source:c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\platform.cpp
+	"Platform.h"
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<OpenGL/OpenGL.h>
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+
+1368386921 c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\platform.h
+
+1369153785 source:c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\player.cpp
+	"Player.h"
+	"Box.cpp"
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<OpenGL/OpenGL.h>
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<iostream>
+
+1369153828 c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\player.h
+
+1369150731 c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\box.cpp
+	"Box.h"
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<OpenGL/OpenGL.h>
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+
+1368525254 source:c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\positions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1369151462 source:c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\steff.cpp
+	<iostream>
+	<ctime>
+	<stdlib.h>
+	<math.h>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+	<string.h>
+	<assert.h>
+	<pthread.h>
+	<png.h>
+	"udp.h"
+	"OtherPlayer.h"
+	"positions.h"
+	"Box.h"
+	"Player.h"
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<OpenGL/OpenGL.h>
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<time.h>
+	"Platform.h"
+	<sys/time.h>
+	"Platform.cpp"
+	<unistd.h>
+	<stdlib.h>
+
+1368525253 c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\positions.h
+
+1368624607 c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\udp.h
+
+1338121090 c:\users\luben gamer\desktop\pthreads\pre-built.2\include\pthread.h
+	<windows.h>
+	"config.h"
+	<time.h>
+	<signal.h>
+	<limits.h>
+	"need_errno.h"
+	<errno.h>
+	<sched.h>
+	<sys/types.h>
+
+1309338364 c:\users\luben gamer\desktop\pthreads\pre-built.2\include\sched.h
+	"need_errno.h"
+	<errno.h>
+	<sys/types.h>
+	<time.h>
+
+1244148012 c:\program files (x86)\gnuwin32\include\png.h
+	"zlib.h"
+	"pngconf.h"
+	<crtdbg.h>
+
+1121653608 c:\program files (x86)\gnuwin32\include\zlib.h
+	"zconf.h"
+
+1368717898 c:\program files (x86)\gnuwin32\include\zconf.h
+	<windows.h>
+	<sys/types.h>
+	<unixio.h>
+
+1244148012 c:\program files (x86)\gnuwin32\include\pngconf.h
+	"pngusr.h"
+	"config.h"
+	<windows.h>
+	<stdio.h>
+	<stdio.h>
+	<sys/types.h>
+	<setjmp.h>
+	<strings.h>
+	<string.h>
+	<stdlib.h>
+	<fp.h>
+	<math.h>
+	<m68881.h>
+	<mem.h>
+	<alloc.h>
+	<malloc.h>
+	<time.h>
+	<dos.h>
+
+1368530717 c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\source\platform.cpp
+	"Platform.h"
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<OpenGL/OpenGL.h>
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+
+1369151615 source:c:\users\luben gamer\dropbox\kth\projektkursen1\mareks del\programering\platformprojekt\merge\udp.c
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+	<string.h>
+	<sys/types.h>
+	<assert.h>
+	<time.h>
+	<windows.h>
+	<winsock.h>
+	<winsock2.h>
+	<Ws2tcpip.h>
+	<sys/time.h>
+	<unistd.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<sys/uio.h>
+
